@@ -1,6 +1,5 @@
 Business Need: Calculate the number of Trees
 
-  @test
   Scenario Template: Form Validation
     Given User is on a calculate page
     When User enters the required values

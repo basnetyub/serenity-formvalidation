@@ -46,7 +46,7 @@ public class CalculateStepDefinitions {
     @Then("{actor} should get {string} message")
     public void userShouldGetMessage(Actor actor, String validationErrorMessage) {
         actor.attemptsTo(
-                Ensure.that(CalculationContents.validationMessages()).containsOnly(validationErrorMessage)
+                Ensure.that(CalculationContents.validationMessages()).containsExactly(validationErrorMessage)
         );
     }
 }
