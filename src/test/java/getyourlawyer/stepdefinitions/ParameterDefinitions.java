@@ -1,4 +1,4 @@
-package starter.stepdefinitions;
+package getyourlawyer.stepdefinitions;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.DataTableType;
@@ -6,7 +6,7 @@ import io.cucumber.java.ParameterType;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import starter.CalculationData;
+import getyourlawyer.model.CalculationData;
 
 import java.util.Map;
 

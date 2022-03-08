@@ -1,4 +1,4 @@
-package starter;
+package getyourlawyer.model;
 
 public record CalculationData(String numberOfSeeds, String name, String time, TreeType treeType) {
     public enum TreeType {

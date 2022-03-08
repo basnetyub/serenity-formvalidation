@@ -1,5 +1,6 @@
-package starter.calculate;
+package getyourlawyer.task;
 
+import getyourlawyer.userinterface.CalculateForm;
 import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.steps.UIInteractionSteps;
 import net.serenitybdd.screenplay.Performable;
@@ -9,12 +10,12 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
 import net.serenitybdd.screenplay.conditions.Check;
 import org.openqa.selenium.By;
-import starter.CalculationData;
+import getyourlawyer.model.CalculationData;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CalculateNumberOfTree extends UIInteractionSteps {
-    public static Performable usingDefaultMethod(CalculationData values) {
+public class CalculateNumberOfTrees extends UIInteractionSteps {
+    public static Performable fillsForm(CalculationData values) {
         return Task.where("{0} calculate Tree using default method",
                 Enter.theValue(values.numberOfSeeds()).into(CalculateForm.NUMBER_OF_SEED_INPUT),
                 Enter.theValue(values.name()).into(CalculateForm.NAME_INPUT),
@@ -29,7 +30,7 @@ public class CalculateNumberOfTree extends UIInteractionSteps {
                 Click.on(CalculateForm.SUBMIT_BUTTON));
     }
 
-    public static Performable selectMethod(String method) {
+    public static Performable usingMethod(String method) {
         Serenity.reportThat("Confirm Alternate Method is not selected",
                 () -> assertThat(Serenity.getDriver().findElement(By.cssSelector(CalculateForm.USE_ALTERNATE_METHOD_INPUT.getCssOrXPathSelector())).isSelected()).isFalse()
         );

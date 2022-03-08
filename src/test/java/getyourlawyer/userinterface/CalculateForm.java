@@ -1,4 +1,4 @@
-package starter.calculate;
+package getyourlawyer.userinterface;
 
 import net.serenitybdd.core.steps.UIInteractionSteps;
 import net.serenitybdd.screenplay.targets.Target;
